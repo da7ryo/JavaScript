@@ -1,5 +1,5 @@
 const drivingLicense = true;
-let age = 30;
+let age = 22;
 
 if (age >= 18) {
   console.log("Enough years to get a license");
