@@ -26,6 +26,3 @@ if (num2 > 10) {
 } else {
   console.log("It is not enough");
 }
-
-num1 *= 2;
-console.log(num1);

@@ -23,11 +23,11 @@ function secondDayOfTheWeekAndLastIndex(arr) {
 
 console.log(secondDayOfTheWeekAndLastIndex(Weeks));
 
-function gerLastElementAndThirdIndex(arr) {
+function getLastElementAndThirdElement(arr) {
   return [arr[arr.length - 1], arr[2]];
 }
 
-console.log(gerLastElementAndThirdIndex(Weeks));
+console.log(getLastElementAndThirdElement(Weeks));
 
 function getFirstAndLast(arr) {
   return [arr[0], arr[arr.length - 1]];
@@ -86,8 +86,9 @@ function clubCheck(name, age, friends) {
   } else if (age >= 18 && friends.length >= 3) {
     return `Welcome ${name}! You have enough friends to party. `;
   } else {
-    return `Sorry ${name}, ring some more friends next time. `;
+    return `Sorry ${name}, Bring some more friends next time. `;
   }
 }
 
 console.log(clubCheck("Dario", 33, friends));
+function clubCheck()
