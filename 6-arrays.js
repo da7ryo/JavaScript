@@ -91,4 +91,3 @@ function clubCheck(name, age, friends) {
 }
 
 console.log(clubCheck("Dario", 33, friends));
-function clubCheck()
