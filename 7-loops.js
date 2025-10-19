@@ -65,25 +65,63 @@ while (i1 <= 5) {
   console.log("Result is:", sum1);
 }
 
-// Zadatak 3 — Pogađanje broja
-// Simuliraj igru pogađanja broja:
-// Tajni broj je 7
-// Dok korisnik ne pogodi broj, traži novi unos (možeš koristiti funkciju koja vraća broj)
-//Brojač pokušaja se povećava svaki put
-// Ako korisnik pogodi, ispiši poruku “Čestitam, pogodili ste!”
-
-const secretNumber = 7;
-let attempts = 0;
-let userInput = getUserInput();
-while (userInput !== secretNumber) {
-  userInput = getUserInput;
-  attempts++;
-}
-
-// Zadatak 4 — Brojevi sve dok zbir ne prijeđe 20
+// Zadatak 3 — Brojevi sve dok zbir ne prijeđe 20
 // Počni sa sum = 0
 // Svaki put dodaj i (počni od 1) dok zbir ne prijeđe 20
 // Ispisi svaki dodani broj i konačni zbir
 
 let sum2 = 0;
-let i;
+let i2 = 1;
+while (i2 <= 20) {
+  console.log(i2);
+  sum2 += i2;
+  i2++;
+}
+
+// Saberi samo parne brojeve od 1 do 20 pomoću while petlje.
+
+let sum3 = 0;
+let i3 = 1;
+
+while (i3 <= 20) {
+  if (i3 % 2 === 0) {
+    console.log(i3);
+    sum3 += i3;
+  }
+  i3++;
+}
+
+console.log("Zbir parnih brojeva od 1 do 20 je:", sum3);
+
+// Pomoću while petlje: ispiši sve neparne brojeve od 1 do 20,
+// izračunaj njihov zbir, i na kraju ispiši zbir u konzoli.
+
+let sum4 = 0;
+let i4 = 1;
+while (i4 <= 20) {
+  if (i4 % 2 !== 0) {
+    console.log(i4);
+    sum4 += i4;
+  }
+  i4++;
+}
+console.log("Zbir neparnih brojeva od 1 do 20 je:", sum4);
+
+// Pomoću while petlje ispiši svakog prijatelja posebno u konzoli.
+
+const friends2 = ["Dario", "Marko", "Ana", "Ivana"];
+let f2 = 0;
+while (f2 <= friends2.length - 1) {
+  console.log(friends2[f2]);
+  f2++;
+}
+
+// Pokušaj napraviti varijantu koja ispisuje:
+// “Prijatelj broj 1 je Dario”,
+// “Prijatelj broj 2 je Marko”
+
+let f3 = 0;
+while (f3 < friends2.length) {
+  console.log(`Prijatelj broj ${f3 + 1} je ${friends2[f3]}`);
+  f3++;
+}
