@@ -111,11 +111,10 @@ if (isAdult && hasTicket) {
   console.log("Ne moze uci");
 }
 
-// 10. Funkcija sa nizom i uslovom
-// Napiši funkciju getFriendsStartingWithA(arr) koja prima niz imena i vraća niz imena koja počinju slovom “A”.
-// Testiraj funkciju sa nizom: ["Ana", "Marko", "Aleksandar", "Ivana"]
-
-const friends = ["Ana", "Marko", "Aleksandar", "Ivana"];
-function getFriendsStartingWithA(arr) {
-  return arr[][A]
-}
+// Završni zadatak – Klub prijatelja
+// Napiši funkciju clubFriendsCheck koja prima niz prijatelja i za svakog prijatelja odlučuje sljedeće:
+// Ako ime počinje na "A" → "najbolji prijatelj"
+// Ako ime počinje na "I" → "prijateljica"
+// Ako ime ima više od 5 slova → "dugogodišnji prijatelj"
+// Za sve ostale → "prijatelj"
+// Funkcija treba vratiti novi niz sa opisima svih prijatelja.
