@@ -115,3 +115,30 @@ function clubFriendsCheck(arr) {
 }
 
 console.log(clubFriendsCheck(friends));
+
+function adultHood(arr) {
+  const ageChecker = [];
+  for (let i = 0; i < arr.length; i++) {
+    currentAge = arr[i];
+    if (currentAge < 1) {
+      ageChecker.push(currentAge + " is a baby");
+    } else if (currentAge < 3) {
+      ageChecker.push(currentAge + " is a todler");
+    } else if (currentAge < 13) {
+      ageChecker.push(currentAge + " is a child");
+    } else if (currentAge < 18) {
+      ageChecker.push(currentAge + " is a teenager");
+    } else if (currentAge < 26) {
+      ageChecker.push(currentAge + " is a young adult");
+    } else if (currentAge < 65) {
+      ageChecker.push(currentAge + " is a adult");
+    } else {
+      ageChecker.push(currentAge + " is a senior");
+    }
+  }
+  return ageChecker;
+}
+
+const age = [18, 12, 65, 88, 44, 14, 0, 3, 24];
+
+console.log(adultHood(age));
