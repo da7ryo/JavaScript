@@ -75,19 +75,118 @@ const people = [
     firstName: "Dario",
     lastName: "Milanovic",
     age: "33",
+    city: "Zagreb",
   },
   {
     firstName: "Marija",
     lastName: "MIlanovic",
     age: "28",
+    city: "Mostar",
   },
   {
     firstName: "Elena",
     lastName: "Milanovic",
     age: "3",
+    city: "Beograd",
   },
 ];
 
 for (let i = 0; i < people.length; i++) {
   console.log(`${people[i].firstName} ima ${people[i].age} godine.`);
 }
+
+// 7. Filtriranje po uslovu
+// Napraviti funkciju filterAdults(arr) koja prima niz ljudi (iz zadatka 6) i vraća novi niz samo onih koji su stariji od 18.
+
+function filterAdults(arr) {
+  const newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const currentPerson = arr[i];
+    if (currentPerson.age >= 18) {
+      newArr.push(currentPerson);
+    }
+  }
+  return newArr;
+}
+
+console.log(filterAdults(people));
+
+// 8. Dodavanje metode svakom objektu u nizu
+// Dodaj svakoj osobi u nizu people metodu introduce() koja ispisuje:
+// "Zdravo, ja sam [firstName] i imam [age] godina."
+// Zatim pozovi metodu za svaku osobu.
+
+for (let i = 0; i < people.length; i++) {
+  const currentPerson = people[i];
+  currentPerson.introduce = function () {
+    console.log(`Zdravo, ja sam ${this.firstName} i imam ${this.age} godina`);
+  };
+}
+
+people[0].introduce();
+people[1].introduce();
+people[2].introduce();
+
+// Zadatak 9 — Usporedba objekata
+// Cilj: napraviti funkciju koja uspoređuje da li dva objekta imaju ista svojstva i iste vrijednosti.
+// Kako to funkcionira:
+// Prvo uzmemo sve ključeve (imena svojstava) iz oba objekta.
+// Ako imaju različit broj ključeva — odmah znamo da nisu isti.
+// Ako broj ključeva odgovara, prolazimo kroz svaki ključ i provjeravamo da li su vrijednosti jednake.
+// Ako sve odgovara → vraćamo true, inače false.
+// Kod:
+
+function areSame(objA, objB) {
+  const keysA = Object.keys(objA);
+  const keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  for (let i = 0; i < keysA.length; i++) {
+    const key = keysA[i];
+    if (objA[key] !== objB[key]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Primjer
+const person1 = { name: "Ana", age: 20 };
+const person2 = { name: "Ana", age: 20 };
+const person3 = { name: "Marko", age: 20 };
+
+console.log(areSame(person1, person2)); // true
+console.log(areSame(person1, person3)); // false
+
+// Zadatak 10 — Kombinacija svega
+// // Cilj: napraviti funkciju koja kreira osobu (objekt) s imenom, prezimenom, godinama i gradom,
+// i dodaje metodu sayHi() koja ispisuje poruku.
+// Kod:
+
+function createPerson(firstName, lastName, age, city) {
+  const person = {
+    firstName: firstName,
+    lastName: lastName,
+    age: age,
+    city: city,
+    sayHi: function () {
+      console.log(`Zdravo, ja sam ${this.firstName} iz ${this.city}.`);
+    },
+  };
+  return person;
+}
+
+// Kreiramo tri osobe
+const p1 = createPerson("Dario", "Milanović", 33, "Graz");
+const p2 = createPerson("Marija", "Kovač", 28, "Zagreb");
+const p3 = createPerson("Ana", "Horvat", 22, "Split");
+
+// Pozivamo metodu za svaku osobu
+p1.sayHi();
+p2.sayHi();
+p3.sayHi();
