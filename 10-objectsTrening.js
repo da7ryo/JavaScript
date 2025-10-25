@@ -190,3 +190,32 @@ const p3 = createPerson("Ana", "Horvat", 22, "Split");
 p1.sayHi();
 p2.sayHi();
 p3.sayHi();
+
+// Zadatak 11: Obrada liste brojeva pomoću callback funkcija
+// Napiši funkciju processNumbers(numbers, operation) koja:
+// prima niz brojeva i callback funkciju (operation),
+// prolazi kroz sve brojeve u nizu pomoću petlje,
+// za svaki broj poziva funkciju operation i dodaje rezultat u novi niz,
+// vraća taj novi niz.
+// To znači da će processNumbers biti higher-order function,
+// a operation će biti callback function.
+
+function processNumbers(numbers, operation) {
+  const results = [];
+  for (let i = 0; i < numbers.length; i++) {
+    results.push(operation(numbers[i]));
+  }
+  return results;
+}
+
+function double(x) {
+  return x * 2;
+}
+
+function square(x) {
+  return x * x;
+}
+
+const numbers = [44, 18, 36, 78];
+
+console.log(processNumbers(numbers, square));
