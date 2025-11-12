@@ -113,3 +113,35 @@ friends[0].sayHi();
 for (let i = 0; i < friends.length; i++) {
   friends[i].sayHi();
 }
+
+const students = [
+  { name: "Ana", score: 88 },
+  { name: "Marko", score: 42 },
+  { name: "Ivana", score: 75 },
+  { name: "Luka", score: 59 },
+];
+
+function evaluateStudents(students) {
+  const newObj = [];
+  for (let i = 0; i < students.length; i++) {
+    let currentStudent = students[i];
+    if (currentStudent.score >= 80) {
+      currentStudent.grade = "odlican";
+    } else if (currentStudent.score >= 60) {
+      currentStudent.grade = "dobar";
+    } else {
+      currentStudent.grade = "nedovoljan";
+    }
+    currentStudent.describe = function () {
+      console.log(`Moje ime je ${this.name}, ocjena je ${this.grade} `);
+    };
+    newObj.push(currentStudent);
+  }
+  return newObj;
+}
+evaluateStudents(students);
+const evaluated = evaluateStudents(students);
+evaluated[0].describe();
+evaluated[1].describe();
+evaluated[2].describe();
+evaluated[3].describe();
