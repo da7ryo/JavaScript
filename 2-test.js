@@ -1,20 +1,20 @@
-// Napiši program koji ima varijablu age.
-// Ako je age 18 ili više, ispiši u konzolu:
-// "Punoljetan si."
-// Inače ispiši: "Maloljetan si."
+// Write a program that has a variable called age.
+// If age is 18 or older, print to the console:
+// "You are an adult."
+// “Otherwise, log to the console: 'You are a minor.'”
 
 let age = 15;
 
 if (age >= 18) {
-  console.log("Punoljetan");
+  console.log("You are an adult.");
 } else {
-  console.log("Maloljetan");
+  console.log("You are a minor.");
 }
 
 console.log(age);
 
-// Napiši funkciju saberi(a, b) koja prima dva broja i vraća njihov zbroj.
-// Zatim rezultat ispiši pomoću console.log.
+// Write a function add(a, b) that takes two numbers and returns their sum.
+// Then display the result using console.log.
 
 function sum(a, b) {
   return a + b;
@@ -22,19 +22,18 @@ function sum(a, b) {
 
 console.log(sum(4, 6));
 
-// Napraviti funkciju pozdrav(ime, godine) koja ispisuje poruku:
-// "Zdravo [ime], imaš [godine] godina!"
+// Create a function greet(name, age) that displays the message:
+// "Hello [name], you are [age] years old!"
 
 function greet(name, age1) {
-  return `Zdravo ${name}, imas ${age1} godina.`;
+  return `Hello ${name}, you are ${age1} years old!`;
 }
 
 console.log(greet("Ana", 22));
 
-// Napiši funkciju provjeriBroj(broj) koja vraća:
-// 'Paran' ako je broj paran
-// 'Neparan' ako je broj neparan
-
+// Write a function checkNumber(number) that returns:
+// 'Even' if the number is even
+// 'Odd' if the number is odd
 function checkNum(a) {
   if (a % 2 === 0) {
     return "Even";
@@ -45,9 +44,9 @@ function checkNum(a) {
 
 console.log(checkNum(6));
 
-// Pomoću ternarnog operatora napravi varijablu poruka koja provjerava:
-// Ako je temperatura veća od 25 → "Vruće je"
-// Ako nije → "Nije vruće"
+// Using the ternary operator, create a variable message that checks:
+// If the temperature is greater than 25 → "It’s hot"
+// If not → "It’s not hot"
 
 function temp(a) {
   return a > 25 ? "It´s hot!" : "It´s not hot!";
