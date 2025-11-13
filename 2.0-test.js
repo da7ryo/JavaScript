@@ -50,13 +50,13 @@ console.log(canDrive(88));
 console.log(canDrive(12));
 
 function testReturn(x) {
-  console.log("Funkcija je počela...");
+  console.log("The function has started...");
 
   if (x > 10) {
-    console.log("Ušao u prvi if...");
-    return "Veće od 10"; // ovdje se funkcija završava!
+    console.log("Entered the first if...");
+    return "Bigger than 10"; // "The function ends here!"
   }
-  console.log("Ova linija se preskače ako je prvi if bio true");
+  console.log("This line is skipped if the first if was true");
 }
 
 console.log(testReturn(12));
