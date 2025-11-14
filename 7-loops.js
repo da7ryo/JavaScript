@@ -1,21 +1,22 @@
-// **** FOR PETLJE ****
+// **** FOR LOOPS ****
 
-// Zadatak 1 — Ispis brojeva od 1 do 10
-// Napiši for petlju koja u konzoli ispisuje brojeve od 1 do 10.
+// Task 1 — Display numbers from 1 to 10
+// Write a for loop that displays the numbers from 1 to 10 in the console.
 
 for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 
-// Zadatak 2 — Samo parni brojevi
-// Pomoću for petlje ispiši samo parne brojeve od 1 do 20.
-
+// Task 2 — Even numbers only
+// Using a for loop, display only the even numbers from 1 to 20.
 for (let i = 0; i <= 20; i++) {
-  if (i % 2 === 0) console.log(i);
+  if (i % 2 === 0) {
+    console.log(i);
+  }
 }
 
-// Zadatak 3 — Saberi brojeve od 1 do 5
-// Napiši petlju koja sabira sve brojeve od 1 do 5 i ispisuje rezultat (treba biti 15).
+// Task 3 — Add the numbers from 1 to 5
+// Write a loop that adds all the numbers from 1 to 5 and displays the result (it should be 15).
 
 let sum = 0;
 for (let i = 1; i <= 5; i++) {
@@ -23,29 +24,29 @@ for (let i = 1; i <= 5; i++) {
   console.log(sum);
 }
 
-// Zadatak 4 — Imena prijatelja
+// Task 4 — Friends' names
 
-//Imaš niz:
+//You have an array:
 
 const friends = ["Dario", "Mateo", "Nikola", "Ivan"];
 
-// Napravi for petlju koja će ispisati svako ime iz niza.
+// Write a for loop that will display each name from the array.
 
 for (let i = 0; i <= friends.length - 1; i++) {
   console.log(friends[i]);
 }
 
-// Zadatak 5 — Obrni redoslijed
-// Pomoću for petlje ispiši imena prijatelja unazad (od posljednjeg prema prvom).
+// Task 5 — Reverse the order
+// Using a for loop, display the friends’ names in reverse order (from last to first).
 
 for (let i = friends.length - 1; i >= 0; i--) {
   console.log(friends[i]);
 }
 
-// **** WHILE PETLJE ****
+// **** WHILE LOOPS ****
 
-// Zadatak 1 — Brojevi od 1 do 10
-// Napiši while petlju koja u konzoli ispisuje brojeve od 1 do 10.
+// Task 1 — Numbers from 1 to 10
+// Write a while loop that displays the numbers from 1 to 10 in the console:
 
 let i = 1;
 while (i <= 10) {
@@ -53,8 +54,8 @@ while (i <= 10) {
   i++;
 }
 
-// Zadatak 2 — Sabiranje brojeva
-// Koristeći while petlju, saberi sve brojeve od 1 do 5 i ispiši zbir.
+// Task 2 — Adding numbers
+// Using a while loop, add all the numbers from 1 to 5 and display the sum:
 
 let sum1 = 0;
 let i1 = 1;
@@ -65,11 +66,10 @@ while (i1 <= 5) {
   console.log("Result is:", sum1);
 }
 
-// Zadatak 3 — Brojevi sve dok zbir ne prijeđe 20
-// Počni sa sum = 0
-// Svaki put dodaj i (počni od 1) dok zbir ne prijeđe 20
-// Ispisi svaki dodani broj i konačni zbir
-
+// Task 3 — Numbers until the sum exceeds 20
+// Start with sum = 0
+// Each time add i (starting from 1) until the sum exceeds 20
+// Display each added number and the final sum
 let sum2 = 0;
 let i2 = 1;
 while (i2 <= 20) {
@@ -78,8 +78,7 @@ while (i2 <= 20) {
   i2++;
 }
 
-// Saberi samo parne brojeve od 1 do 20 pomoću while petlje.
-
+// Add only the even numbers from 1 to 20 using a while loop:
 let sum3 = 0;
 let i3 = 1;
 
@@ -91,11 +90,10 @@ while (i3 <= 20) {
   i3++;
 }
 
-console.log("Zbir parnih brojeva od 1 do 20 je:", sum3);
+console.log("The sum of even numbers from 1 to 20 is:", sum3);
 
-// Pomoću while petlje: ispiši sve neparne brojeve od 1 do 20,
-// izračunaj njihov zbir, i na kraju ispiši zbir u konzoli.
-
+// Using a while loop: display all odd numbers from 1 to 20,
+// calculate their sum, and finally display the sum in the console.
 let sum4 = 0;
 let i4 = 1;
 while (i4 <= 20) {
@@ -105,9 +103,9 @@ while (i4 <= 20) {
   }
   i4++;
 }
-console.log("Zbir neparnih brojeva od 1 do 20 je:", sum4);
+console.log("The sum of odd numbers from 1 to 20 is:", sum4);
 
-// Pomoću while petlje ispiši svakog prijatelja posebno u konzoli.
+// Using a while loop, display each friend individually in the console.
 
 const friends2 = ["Dario", "Marko", "Ana", "Ivana"];
 let f2 = 0;
@@ -116,12 +114,12 @@ while (f2 <= friends2.length - 1) {
   f2++;
 }
 
-// Pokušaj napraviti varijantu koja ispisuje:
-// “Prijatelj broj 1 je Dario”,
-// “Prijatelj broj 2 je Marko”
+// Try to make a version that displays:
+// "Friend number 1 is Dario"
+// "Friend number 2 is Marko"
 
 let f3 = 0;
 while (f3 < friends2.length) {
-  console.log(`Prijatelj broj ${f3 + 1} je ${friends2[f3]}`);
+  console.log(`Friend number ${f3 + 1} is ${friends2[f3]}`);
   f3++;
 }
